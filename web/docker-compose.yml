@@ -1,0 +1,9 @@
+api:
+  build: .
+  ports:
+    - "5000:5000"
+  volumes:
+    - .:/app
+    - ./keras_models:/root/.keras/models
+  environment:
+    - KERAS_MODEL_PATH=/app/models/breeds_predictor.h5
